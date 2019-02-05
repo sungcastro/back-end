@@ -2,22 +2,26 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
 
+const apiEndpoint = "https://jsonplaceholder.typicode.com/todos";
+
 class App extends Component {
   state = {
     posts: []
   };
 
-  handleAdd = () => {
-    console.log("Add");
-  };
-
   async componentDidMount() {
     // initialy : pending state  > resolved (success)  OR rejected (failure)
-    const { data: posts } = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos"
-    );
+    const { data: posts } = await axios.get(apiEndpoint);
     this.setState({ posts });
   }
+
+  handleAdd = async () => {
+    const obj = { title: "a", body: "b" };
+    const { data: post } = await axios.post(apiEndpoint, obj);
+
+    const posts = [post, ...this.state.posts];
+    this.setState({ posts });
+  };
 
   handleUpdate = post => {
     console.log("Update", post);
