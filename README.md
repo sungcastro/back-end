@@ -26,5 +26,5 @@ until we get the response.
 <p><b>axios.put(apiEndpoint + "/" + post.id, post);</b></p>
 <p>As the first argument, we need to give the url (this references the entire post collection). But in this case we are updating a specific post, so we should include the post id in the url. As a second argument we need to pass the data to be sent to the server, so we need to send the entire post object</p>
 
-<p><b>axios.put(apiEndpoint + "/" + post.id, {title: post.title});</b></p>
+<p><b>axios.patch(apiEndpoint + "/" + post.id, {title: post.title});</b></p>
 <p>For patch method, we dont need to sent the entire post object, we can only send only one or more properties, and this are the properties we want to update</p>
