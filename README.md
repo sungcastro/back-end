@@ -28,3 +28,11 @@ until we get the response.
 
 <p><b>axios.patch(apiEndpoint + "/" + post.id, {title: post.title});</b></p>
 <p>For patch method, we dont need to sent the entire post object, we can only send only one or more properties, and this are the properties we want to update</p>
+
+<h4>Optimistic vs Pessimistic</h4>
+<p>Optimistic updates, first you keep a reference to the original state and then update the Ui before calling the server, then wrap the call to the server in a try and catch block.</p>
+<p>In order to detect errors, we need to wrap the call to the server with a try, catch block.</p>
+<p>Try, makes the call to the server</p>
+<p>Catch, recives (ex) which means exeption or an 'error', and  this is the moment where we display an error to the user and revert the screen,
+ by updating the state to the previous state.
+</p>
