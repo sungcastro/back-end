@@ -44,7 +44,7 @@ recives (ex) which means exeption or an 'error', and  this is the moment where w
 
 <h4>Expected</h4>
 
-<p>Expected errors are apiEndpoints predict and return</p>
+<p>Expected errors are apiEndpoints predict and return.</p>
 <p>If we try to delete a post in an invalid id, the server will return a response with a status code <b>404</b> which means not found.</p>
 <p>If we try to submit a form with invalid data <b>400</b> which means bad request.</p>
 <p>In the http protocol, this errors are defined as CLIENT ERRORS. </p>
@@ -72,3 +72,9 @@ includes an error. This function will be executed everytime we have a response w
 <br>
 To pass control to our catch block, we need to return a reject promise. <b> return Promise.reject() </b> this will create a rejected promise, and we simply include this error in our promise object <b> return Promise.reject(error) </b>.
 </p>
+
+<h3>Extracting a Reusable Http Service</h3>
+
+<h4>httpService.js</h4>
+<p>The defult object should have 4 methods. Get, post, put, and delete. 
+Just like the axios object.</p>
