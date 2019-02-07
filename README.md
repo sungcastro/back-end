@@ -15,8 +15,10 @@ until we get the response.
 <p>Whenever await keyword is used in a function, we should decorated that function with <b>async</b> keyword.</p>
 
 <h3>Creating Data</h3>
-<p>The <br>get</b> method is used to get data and <b>post</b> to create data.</p>
-<p>axios.post(apiEndpoint, obj);   Here,because we'r creating data we need to include it in the body of the request, so we need to send this object to the server. So obj is passed as the second argument of the post method.</p>
+<p>The <b>get</b> method is used to get data and <b>post</b> to create data.</p>
+<p>axios.post(apiEndpoint, obj);  
+<br>
+Here, because we'r creating data we need to include it in the body of the request, so we need to send this object to the server. So obj is passed as the second argument of the post method.</p>
 
 <h3>Updating Data</h3>
 <p>There are two methods for updating data: <b>patch</b> and <b>put</b>.</p>
@@ -55,3 +57,17 @@ recives (ex) which means exeption or an 'error', and  this is the moment where w
 <p> <b>ex.response</b> is set if we get a succesful response from the server, if the network is down, or the server crash, we wont get a response so this property will be null.</p>
 
 <p> <b>ex.request</b> is set if we can sucessfully submit a request to the server, otherwise its going to be null.</p>
+
+<h3>Handling Unexpected Errors Globally</h3>
+
+<h4>Interceptors in axios</h4>
+
+<p>We can intercept our requests before going out and our responses that we get.</p>
+<p><b>axios.interceptors.response.use()</b></p>
+<p>use() method takes to parameters, both parameters a functions that will be called. The first function that will be called <p><b>axios.interceptors.response.use(success)</b></p> if the response is succesful.</p>
+
+<p>
+And the second function will be called if the response <p><b>axios.interceptors.response.use(success, error)</b></p>includes an error. This function will be executed everytime we have a response with an error. 
+<br>
+To pass control to our catch block, we need to return a reject promise. <b> return Promise.reject() </b> this will create a rejected promise, and we simply include this error in our promise object <b> return Promise.reject(error) </b>.
+</p>
