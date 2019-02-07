@@ -64,10 +64,11 @@ recives (ex) which means exeption or an 'error', and  this is the moment where w
 
 <p>We can intercept our requests before going out and our responses that we get.</p>
 <p><b>axios.interceptors.response.use()</b></p>
-<p>use() method takes to parameters, both parameters a functions that will be called. The first function that will be called <p><b>axios.interceptors.response.use(success)</b></p> if the response is succesful.</p>
+<p>use() method takes to parameters, both parameters are functions that will be called. The first function that will be called <b>axios.interceptors.response.use(success)</b>if the response is succesful.</p>
 
 <p>
-And the second function will be called if the response <p><b>axios.interceptors.response.use(success, error)</b></p>includes an error. This function will be executed everytime we have a response with an error. 
+And the second function will be called if the response <b>axios.interceptors.response.use(success, error)</b>
+includes an error. This function will be executed everytime we have a response with an error. 
 <br>
 To pass control to our catch block, we need to return a reject promise. <b> return Promise.reject() </b> this will create a rejected promise, and we simply include this error in our promise object <b> return Promise.reject(error) </b>.
 </p>
