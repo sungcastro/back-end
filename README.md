@@ -64,7 +64,7 @@ recives (ex) which means exeption or an 'error', and  this is the moment where w
 
 <p>We can intercept our requests before going out and our responses that we get.</p>
 <p><b>axios.interceptors.response.use()</b></p>
-<p>use() method takes to parameters, both parameters are functions that will be called. The first function that will be called <b>axios.interceptors.response.use(success)</b>if the response is succesful.</p>
+<p>use() method takes to parameters, both parameters are functions that will be called. The first function that will be called <b>axios.interceptors.response.use(success)</b> if the response is succesful.</p>
 
 <p>
 And the second function will be called if the response <b>axios.interceptors.response.use(success, error)</b>
