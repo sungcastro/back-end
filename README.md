@@ -1,6 +1,7 @@
 <h1>Npm:</h1>
 
 <p>npm i axios</p>
+<p>npm i react-toastify@4.1</p>
 
 <h1>Notes</h1>
 
@@ -44,14 +45,14 @@ recives (ex) which means exeption or an 'error', and  this is the moment where w
 
 <h4>Expected</h4>
 
-<p>Expected errors are apiEndpoints predict and return.</p>
-<p>If we try to delete a post in an invalid id, the server will return a response with a status code <b>404</b> which means not found.</p>
-<p>If we try to submit a form with invalid data <b>400</b> which means bad request.</p>
-<p>In the http protocol, this errors are defined as CLIENT ERRORS. </p>
+<p>-. Expected errors are apiEndpoints predict and return.</p>
+<p>-. If we try to delete a post in an invalid id, the server will return a response with a status code <b>404</b> which means not found.</p>
+<p>-. If we try to submit a form with invalid data <b>400</b> which means bad request.</p>
+<p>-. In the http protocol, this errors are defined as CLIENT ERRORS. </p>
 
 <h4>Unexpected</h4>
-<p>Unexpected errors are errors that techically should not happen under normal circumstances.</p>
-<p>If the network is down, server down, db down, bug.</p>
+<p>-. Unexpected errors are errors that techically should not happen under normal circumstances.</p>
+<p>-. If the network is down, server down, db down, bug.</p>
 <br>
 <p>The (ex) 'Exception' object has two properties, <b>Request</b> and <b>Response</b> </p>
 <p> <b>ex.response</b> is set if we get a succesful response from the server, if the network is down, or the server crash, we wont get a response so this property will be null.</p>
