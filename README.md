@@ -2,6 +2,7 @@
 
 <p>npm i axios</p>
 <p>npm i react-toastify@4.1</p>
+<p>npm i @sentry/browser</p>
 
 <h1>Notes</h1>
 
@@ -79,3 +80,9 @@ To pass control to our catch block, we need to return a reject promise. <b> retu
 <h4>httpService.js</h4>
 <p>The defult object should have 4 methods. Get, post, put, and delete. 
 Just like the axios object.</p>
+
+<h3>Logging Errors</h3>
+
+<p>Since the console is part of the end user's browers, we cant not reach the errors. So we need to store it somewhere that we can access.
+Thats when we can use a login as a service provider.
+</p>

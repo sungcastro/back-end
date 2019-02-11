@@ -4,6 +4,11 @@ import config from "./config.json";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import * as Sentry from "@sentry/browser";
+
+Sentry.init({
+  dsn: "https://fd834fa9713e477e8a958229ca3a43ad@sentry.io/1391641"
+});
 
 class App extends Component {
   state = {
